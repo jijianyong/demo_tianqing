@@ -1,0 +1,23 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1048865",
+      "name": "设置",
+      "font_class": "icon_set_up",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "2742667",
+      "name": "提醒",
+      "font_class": "tixing",
+      "unicode": "e679",
+      "unicode_decimal": 59001
+    }
+  ]
+}
