@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "720964",
+      "name": "箭头",
+      "font_class": "xiazai6",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
       "icon_id": "1048865",
       "name": "设置",
       "font_class": "icon_set_up",
@@ -18,6 +25,13 @@
       "font_class": "tixing",
       "unicode": "e679",
       "unicode_decimal": 59001
+    },
+    {
+      "icon_id": "4948950",
+      "name": "箭头",
+      "font_class": "jiantou",
+      "unicode": "e610",
+      "unicode_decimal": 58896
     }
   ]
 }
