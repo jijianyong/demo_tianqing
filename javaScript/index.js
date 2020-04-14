@@ -26,9 +26,10 @@ window.onload = function () {
         }, 15)
     }
 
-
-    var img = this.document.getElementsByClassName("img")[0],
-        // icon = this.document.getElementsByClassName("icon")[0],
+    //获取盒子
+    var layerCarousel = this.document.getElementsByClassName("layer-1-carousel")[0],
+        img = this.document.getElementsByClassName("img")[0],
+        icon = this.document.getElementsByClassName("icon")[0],
         imgLeft = this.document.getElementsByClassName("imgLeft")[0],
         imgRight = this.document.getElementsByClassName("imgRight")[0],
         link = this.document.getElementsByClassName("link")[0],
@@ -36,6 +37,18 @@ window.onload = function () {
         linkLi = linkUl.children,
         liList = linkLi.length,
         item = 0;
+
+    //自动播放
+    function play() {
+        var leader = img.offsetLeft;
+        var step = -5;
+        if(leader > -2200) {
+            leader += step;
+            img.style.left = leader + "px";
+        } else {
+            img.style.left = 0 + "px";
+        }
+    }
 
     //点击小角标，图片移动到对应位置
     for (var i = 0; i < liList; i++) {
@@ -55,6 +68,9 @@ window.onload = function () {
     //右移动
     imgRight.onclick = function () {
         item++;
+        // item = item < liList ? item : liList-1;
+        // var target = -550 * item;
+        // animate(img,target);
         if(item < liList) {
             var target = -550 * item;
             animate(img,target);
@@ -82,15 +98,18 @@ window.onload = function () {
             linkLi[item].classList = "link-first";
         }
     }
-    //自动播放
-    var zidong = setInterval(imgRight.onclick,1000);
 
-    //鼠标移入事件
-    var move = img.addEventListener("mouseover", function() {
-        clearInterval(zidong);
-    }, false)
-    //鼠标移出事件
-    img.addEventListener("mouseout", function() {
-        
-    }, false)
+        //幻灯片效果
+        var sTimer = setInterval(imgRight.onclick,1000);
+    
+        //鼠标移入事件
+        layerCarousel.addEventListener("mouseover", function() {
+            icon.style.display = "block";
+            clearInterval(sTimer);
+        })
+        //鼠标移出事件
+        layerCarousel.addEventListener("mouseout", function() {
+            icon.style.display = "none";
+            sTimer = setInterval(imgRight.onclick,1000);
+        })
 }
