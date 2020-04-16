@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>入职测试</title>
     <link rel="stylesheet" href="./css/index.css">
+    <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
     <script src="./javaScript/index.js"></script>
 </head>
 <body>
@@ -92,7 +94,7 @@
             <div class="layer-2">
                 <div class="graph">
                     <span>曲线图数据展示</span>
-                    <div class="graph-data"></div>
+                    <div id="graph-data" class="graph-data"></div>
                 </div>
             </div>
             <!-- 图层3 -->
@@ -101,14 +103,14 @@
                 <div class="layer-3-histogram left">
                     <div class="histogram">
                         <span>饼状图数据展示</span>
-                        <div class="chart-data"></div>
+                        <div id="chart-data" class="chart-data"></div>
                     </div>
                 </div>
                 <!-- 柱状图 -->
                 <div class="layer-3-histogram right">
                     <div class="histogram">
                         <span>柱状图数据展示</span>
-                        <div class="histogram-data"></div>
+                        <div id="histogram-data" class="histogram-data"></div>
                     </div>
                 </div>
             </div>
